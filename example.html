@@ -32,17 +32,15 @@
     <h1>Progress Bar Library</h1>
     <p>A pure CSS library for creating progress bars.</p>
     <div class="demo-section">
-        <h2>Basic progress bar (static)</h2>
-        <p>Example of a progress bar with fixed width of 40%:</p>
+        <h2>Basic progress bar (refactored)</h2>
+        <p>Simplified HTML using pseudo-element:</p>
         
         <!-- Basic progress bar -->
-        <div class="progress-bar">
-            <div class="progress-bar__fill" style="width: 40%"></div>
-        </div>
+        <div class="progress-bar" style="--pb-progress: 50%;"></div>
         
-        <pre><code>&lt;div class="progress-bar"&gt;
-    &lt;div class="progress-bar__fill" style="width: 40%"&gt;&lt;/div&gt;
-&lt;/div&gt;</code></pre>
+        <pre><code>&lt;div class="progress-bar" style="--pb-progress: 50%;"&gt;&lt;/div&gt;</code></pre>
+        
+        <p><strong>Improvement:</strong> HTML simplified from 2 elements to 1</p>
     </div>
     <div class="demo-section">
         <h2>With CSS Custom Properties</h2>
@@ -53,17 +51,13 @@
             --pb-color: #e74c3c;
             --pb-background: #ffebee;
             --pb-progress: 75%;
-        ">
-            <div class="progress-bar__fill"></div>
-        </div>
+        "></div>
         
         <pre><code>&lt;div class="progress-bar" style="
     --pb-color: #e74c3c;
     --pb-background: #ffebee;
     --pb-progress: 75%;
-"&gt;
-    &lt;div class="progress-bar__fill"&gt;&lt;/div&gt;
-&lt;/div&gt;</code></pre>
+"&gt;&lt;/div&gt;</code></pre>
         
         <p>Available CSS variables:</p>
         <ul>
@@ -77,13 +71,9 @@
         <p>First theme using CSS class:</p>
         
         <!-- Blue theme -->
-        <div class="progress-bar theme-blue" style="--pb-progress: 60%;">
-            <div class="progress-bar__fill"></div>
-        </div>
+        <div class="progress-bar theme-blue" style="--pb-progress: 60%;"></div>
         
-        <pre><code>&lt;div class="progress-bar theme-blue" style="--pb-progress: 60%;"&gt;
-    &lt;div class="progress-bar__fill"&gt;&lt;/div&gt;
-&lt;/div&gt;</code></pre>
+        <pre><code>&lt;div class="progress-bar theme-blue" style="--pb-progress: 60%;"&gt;&lt;/div&gt;</code></pre>
         
         <p>Features:</p>
         <ul>
@@ -97,13 +87,9 @@
         <p>Green theme with shadow effect:</p>
         
         <!-- Green theme -->
-        <div class="progress-bar theme-green" style="--pb-progress: 80%;">
-            <div class="progress-bar__fill"></div>
-        </div>
+        <div class="progress-bar theme-green" style="--pb-progress: 80%;"></div>
         
-        <pre><code>&lt;div class="progress-bar theme-green" style="--pb-progress: 80%;"&gt;
-    &lt;div class="progress-bar__fill"&gt;&lt;/div&gt;
-&lt;/div&gt;</code></pre>
+        <pre><code>&lt;div class="progress-bar theme-green" style="--pb-progress: 80%;"&gt;&lt;/div&gt;</code></pre>
         
         <p>Features:</p>
         <ul>
@@ -117,13 +103,9 @@
         <p>Dark theme with cyan accent for better visibility:</p>
         
         <!-- Dark theme -->
-        <div class="progress-bar theme-dark" style="--pb-progress: 70%;">
-            <div class="progress-bar__fill"></div>
-        </div>
+        <div class="progress-bar theme-dark" style="--pb-progress: 70%;"></div>
         
-        <pre><code>&lt;div class="progress-bar theme-dark" style="--pb-progress: 70%;"&gt;
-    &lt;div class="progress-bar__fill"&gt;&lt;/div&gt;
-&lt;/div&gt;</code></pre>
+        <pre><code>&lt;div class="progress-bar theme-dark" style="--pb-progress: 70%;"&gt;&lt;/div&gt;</code></pre>
         
         <p>Features:</p>
         <ul>
