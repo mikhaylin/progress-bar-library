@@ -20,7 +20,7 @@
     width: var(--pb-progress, 0%);
     background-color: var(--pb-color, #3498db);
     border-radius: 10px;
-    transition: none;
+    transition: width 0.3s ease;
 }
 
 /* Themes */
