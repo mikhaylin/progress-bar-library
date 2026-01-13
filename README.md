@@ -5,9 +5,12 @@ A pure CSS library for creating customizable progress bars.
 ## Features
 
 - Pure CSS, no JavaScript required for basic functionality
-- Easy to customize
+- Easy to customize with CSS variables
 - Responsive design
-- Multiple themes (coming soon)
+- 3 built-in themes: blue, green, dark
+- Size modifiers: small, default, large
+- Striped pattern modifier
+- Uses CSS pseudo-elements (clean HTML)
 
 ## Installation
 
@@ -16,6 +19,31 @@ Simply include the CSS file in your project:
 ```html
 <link rel="stylesheet" href="progress-bar.css">
 ```
+
+## Basic Usage
+
+```html
+<!-- Basic progress bar -->
+<div class="progress-bar" style="--pb-progress: 50%;"></div>
+
+<!-- With theme -->
+<div class="progress-bar theme-blue" style="--pb-progress: 75%;"></div>
+
+<!-- With size modifier -->
+<div class="progress-bar size-small" style="--pb-progress: 60%;"></div>
+
+<!-- With striped pattern -->
+<div class="progress-bar striped" style="--pb-progress: 80%;"></div>
+
+<!-- Multiple modifiers -->
+<div class="progress-bar theme-green size-large striped" style="--pb-progress: 90%;"></div>
+```
+
+## CSS Variables
+
+- `--pb-progress`: Progress value (0% to 100%)
+- `--pb-color`: Fill color
+- `--pb-background`: Background color
 
 ## Project Structure
 
