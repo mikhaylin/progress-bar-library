@@ -18,3 +18,14 @@
     transition: none;
     width: var(--pb-progress, 0%);
 }
+
+/* Themes */
+
+.theme-blue {
+    --pb-color: #2196f3;
+    --pb-background: #e3f2fd;
+}
+
+.theme-blue .progress-bar__fill {
+    background: linear-gradient(to right, #2196f3, #1976d2);
+}
