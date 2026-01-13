@@ -51,6 +51,30 @@ Simply include the CSS file in your project:
 - `example.html` - Demo and usage examples
 - `README.md` - Documentation
 
+## JavaScript Helper (Optional)
+
+Include the JavaScript file for easier control:
+
+```html
+<script src="progress-bar.js"></script>
+```
+
+Basic usage:
+
+```html
+// Set progress to 75%
+ProgressBar.setProgress('#my-progress', 75);
+
+// Animate to 100% over 1.5 seconds
+ProgressBar.animateTo('#my-progress', 100, 1500);
+
+// Get current progress
+const current = ProgressBar.getProgress('#my-progress');
+
+// Simulate loading (for demos)
+ProgressBar.simulateLoading('#my-progress');
+```
+
 ## License
 
 MIT License

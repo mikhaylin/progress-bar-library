@@ -27,6 +27,7 @@
             font-family: monospace;
         }
     </style>
+    <script src="progress-bar.js"></script>
 </head>
 <body>
     <h1>Progress Bar Library</h1>
@@ -220,6 +221,44 @@ element.style.setProperty('--pb-progress', '75%');</code></pre>
         </ul>
         
         <p><strong>Note:</strong> Animation works when CSS variable --pb-progress changes via JavaScript or developer tools.</p>
+    </div>
+    <div class="demo-section">
+        <h2>JavaScript Integration</h2>
+        <p>Optional JavaScript helper for easier control:</p>
+        
+        <!-- Demo progress bar -->
+        <div class="progress-bar theme-green" id="js-demo" style="--pb-progress: 25%;"></div>
+        
+        <div style="margin-top: 15px;">
+            <button onclick="ProgressBar.setProgress('#js-demo', 25)">25%</button>
+            <button onclick="ProgressBar.setProgress('#js-demo', 50)">50%</button>
+            <button onclick="ProgressBar.setProgress('#js-demo', 75)">75%</button>
+            <button onclick="ProgressBar.animateTo('#js-demo', 100, 2000)">Animate to 100% (2s)</button>
+            <button onclick="ProgressBar.simulateLoading('#js-demo')">Simulate Loading</button>
+            <button onclick="ProgressBar.setProgress('#js-demo', 0)">Reset</button>
+        </div>
+        
+        <pre><code>// Basic usage
+ProgressBar.setProgress('#my-bar', 75);
+
+// Animated transition
+ProgressBar.animateTo('#my-bar', 100, 1500);
+
+// Get current value
+const current = ProgressBar.getProgress('#my-bar');
+
+// Simulate loading (demo)
+ProgressBar.simulateLoading('#my-bar');</code></pre>
+        
+        <p>API Methods:</p>
+        <ul>
+            <li><code>setProgress(selector, value)</code> - Set progress immediately</li>
+            <li><code>animateTo(selector, value, duration)</code> - Smooth animation</li>
+            <li><code>getProgress(selector)</code> - Get current value</li>
+            <li><code>simulateLoading(selector, interval)</code> - Demo simulation</li>
+        </ul>
+        
+        <p><strong>Note:</strong> JavaScript is optional. The library works with pure CSS.</p>
     </div>
 </body>
 </html>
