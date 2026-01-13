@@ -115,5 +115,41 @@
             <li>Border for definition</li>
         </ul>
     </div>
+    <div class="demo-section">
+        <h2>Size Modifiers</h2>
+        <p>Different sizes for various use cases:</p>
+        
+        <!-- Small size -->
+        <p>Small (10px):</p>
+        <div class="progress-bar size-small" style="--pb-progress: 65%;"></div>
+        
+        <!-- Default size -->
+        <p>Default (20px):</p>
+        <div class="progress-bar" style="--pb-progress: 65%;"></div>
+        
+        <!-- Large size -->
+        <p>Large (30px):</p>
+        <div class="progress-bar size-large" style="--pb-progress: 65%;"></div>
+        
+        <!-- With theme -->
+        <p>Small with green theme:</p>
+        <div class="progress-bar theme-green size-small" style="--pb-progress: 80%;"></div>
+        
+        <pre><code>&lt;!-- Small size --&gt;
+&lt;div class="progress-bar size-small" style="--pb-progress: 65%;"&gt;&lt;/div&gt;
+
+&lt;!-- Large size --&gt;  
+&lt;div class="progress-bar size-large" style="--pb-progress: 65%;"&gt;&lt;/div&gt;
+
+&lt;!-- With theme --&gt;
+&lt;div class="progress-bar theme-green size-small" style="--pb-progress: 80%;"&gt;&lt;/div&gt;</code></pre>
+        
+        <p>Available size classes:</p>
+        <ul>
+            <li><code>.size-small</code> - 10px height</li>
+            <li><code>(default)</code> - 20px height</li>
+            <li><code>.size-large</code> - 30px height</li>
+        </ul>
+    </div>
 </body>
 </html>
