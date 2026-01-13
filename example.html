@@ -31,7 +31,6 @@
 <body>
     <h1>Progress Bar Library</h1>
     <p>A pure CSS library for creating progress bars.</p>
-    
     <div class="demo-section">
         <h2>Basic progress bar (static)</h2>
         <p>Example of a progress bar with fixed width of 40%:</p>
@@ -44,6 +43,34 @@
         <pre><code>&lt;div class="progress-bar"&gt;
     &lt;div class="progress-bar__fill" style="width: 40%"&gt;&lt;/div&gt;
 &lt;/div&gt;</code></pre>
+    </div>
+    <div class="demo-section">
+        <h2>With CSS Custom Properties</h2>
+        <p>Example using CSS variables for customization:</p>
+        
+        <!-- Custom progress bar with variables -->
+        <div class="progress-bar" style="
+            --pb-color: #e74c3c;
+            --pb-background: #ffebee;
+            --pb-progress: 75%;
+        ">
+            <div class="progress-bar__fill"></div>
+        </div>
+        
+        <pre><code>&lt;div class="progress-bar" style="
+    --pb-color: #e74c3c;
+    --pb-background: #ffebee;
+    --pb-progress: 75%;
+"&gt;
+    &lt;div class="progress-bar__fill"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        
+        <p>Available CSS variables:</p>
+        <ul>
+            <li><code>--pb-color</code> - fill color (default: #3498db)</li>
+            <li><code>--pb-background</code> - background color (default: #f0f0f0)</li>
+            <li><code>--pb-progress</code> - progress value (default: 0%)</li>
+        </ul>
     </div>
 </body>
 </html>

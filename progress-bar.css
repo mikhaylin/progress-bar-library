@@ -1,10 +1,10 @@
-/* Progress Bar Library - Basic styles */
+/* Progress Bar Library - Basic styles with CSS variables */
 
 .progress-bar {
     /* Progress bar container */
     width: 100%;
     height: 20px;
-    background-color: #f0f0f0;
+    background-color: var(--pb-background, #f0f0f0);
     border-radius: 10px;
     overflow: hidden;
     position: relative;
@@ -13,7 +13,8 @@
 .progress-bar__fill {
     /* Fillable part */
     height: 100%;
-    background-color: #3498db;
+    background-color: var(--pb-color, #3498db);
     border-radius: 10px;
     transition: none;
+    width: var(--pb-progress, 0%);
 }
